@@ -1,0 +1,161 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background: #0f172a;
+    --panel: #1e293b;
+    --border: #334155;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --accent: #06b6d4;
+    --success: #10b981;
+    --error: #ef4444;
+}
+
+body {
+    min-height: 100vh;
+    padding: 24px;
+    display: grid;
+    place-items: center;
+    background: var(--background);
+    color: var(--text);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 680px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+header h1 {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+header p,
+.hint,
+footer {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.checker {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: clamp(20px, 5vw, 32px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--background);
+    color: var(--text);
+    font: inherit;
+    font-family: monospace;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(212, 6, 140, 0.15);
+}
+
+.hint {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #10f057;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: filter 0.2s, transform 0.2s;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+button:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+#errorMessage {
+    color: var(--error);
+    margin-top: 14px;
+}
+
+.result {
+    margin-top: 24px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--background);
+    overflow-wrap: anywhere;
+}
+
+.result h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+#insertionCount {
+    color: var(--success);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#explanation {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .checker {
+        border-radius: 14px;
+    }
+}

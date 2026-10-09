@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bracket Balance Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Bracket Balance Checker </h1>
+            <p>
+                Understand parentheses balancing through
+                a greedy algorithm.
+            </p>
+        </header>
+
+        <section class="checker">
+            <label for="bracketInput">Enter your parentheses string</label>
+
+            <input
+                type="text"
+                id="bracketInput"
+                placeholder="Example: (()))"
+                autocomplete="off"
+                spellcheck="false"
+            >
+
+            <p class="hint">
+                Use only the characters ( and ).
+            </p>
+
+            <button id="analyzeBtn">Analyze String and return insertion count</button>
+
+            <p id="errorMessage" role="alert"></p>
+
+            <div id="result" class="result" aria-live="polite" hidden>
+                <h2 id="resultTitle">Analysis Result</h2>
+                <p id="insertionCount"></p>
+                <p id="explanation"></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Powered by Greedy Algorithms · O(n) Time</p>
+        </footer>
+    </main>
+</body>
+</html>
